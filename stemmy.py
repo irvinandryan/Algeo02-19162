@@ -9,3 +9,4 @@ with open('data1.txt', 'r') as file:            #nama file data1 yang nantinya b
 output = stemmer.stem(data)
 
 print(output)
+
