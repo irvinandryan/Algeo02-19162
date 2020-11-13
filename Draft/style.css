@@ -22,20 +22,35 @@ ul {
      padding : 0;
      overflow: hidden;
      width: 100% !important;
-     height: 70px;
+     height: 120px;
 }
 
 .searchbar input[type=text]{
      position: absolute;
      top: 135px;
-     left: 565px;
+     left: 680px;
      transform: translate(-50%,-50%);
-     height: 35px;
+     height: 20px;
      width: 300px;
      border-radius: 40px;
      padding: 10px;
 }
 
 .searchbar input[type=submit] {
+     position: absolute;
+     top: 163px;
+     left: 650px;
      display: inline-block;
+}
+
+.uploadButton {
+     position: absolute;
+     border: none;
+     color: white;
+     text-align: center;
+     text-decoration:none;
+     top: 190px;
+     left: 635px;
+     display: inline-block;
+     font-size: 16px;
 }
