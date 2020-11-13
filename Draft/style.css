@@ -1,0 +1,41 @@
+h2 {
+     margin-top: 25px;
+     font-family: 'Franklin Gothic';
+     font-size: 50px;
+     font-weight: 700;
+     text-align: center;
+     color:rgb(88, 44, 50);
+     margin-bottom: 15px;
+}
+
+.Searchy{
+     color: rgb(88, 44, 50);
+     font-size: 30px;
+     font-family: 'Lucida Handwriting';
+     margin-left: -10px;
+     text-align: center;
+}
+
+ul {
+     background-color: rgb(18, 100, 141);
+     list-style-type: none;
+     padding : 0;
+     overflow: hidden;
+     width: 100% !important;
+     height: 70px;
+}
+
+.searchbar input[type=text]{
+     position: absolute;
+     top: 135px;
+     left: 565px;
+     transform: translate(-50%,-50%);
+     height: 35px;
+     width: 300px;
+     border-radius: 40px;
+     padding: 10px;
+}
+
+.searchbar input[type=submit] {
+     display: inline-block;
+}
