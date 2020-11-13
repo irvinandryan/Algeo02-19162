@@ -54,3 +54,56 @@ ul {
      display: inline-block;
      font-size: 16px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+     font-size: 15px;
+     font-weight: 700;
+     margin-top: 40px;
+     width: 100% !important;
+     background-color: rgb(18, 100, 141);
+     padding-bottom: 15px;
+     padding-top: 10px;
+     text-align: center;
+}
+
+footer h3{
+     font-family: 'Lucida Sans';
+     color: whitesmoke;
+     font-size: 25px;
+     text-align: center;
+     margin: auto;
+
+ }
+
+
+ /* ini buat perihal */
+ .perihal{
+     margin: 70px 0;
+     background-color: rgb(18, 100, 141);
+     padding-top: 25px;
+     padding-bottom: 50px;
+ }
+ .perihal p {
+     font-family: 'Lucida Sans';
+     font-size: 20px;
+     text-align: left;
+     color: whitesmoke;
+     width: 1000px;
+     margin: auto;
+ }
+ 
+ .perihal h2{
+     color: whitesmoke;
+ }
