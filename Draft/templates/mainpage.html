@@ -7,10 +7,12 @@
      <body>
           <a style="text-decoration: none" href="./"><h2>AID <span class="Searchy">Search!</span></h2></a>
           <ul>
-               <div class="searchbar">
-                    <input type="text" name='q' id="searchBox" placeholder="Masukkan Query">
-                    <input type="submit" name = "searchButton" value="Search">
-               </div>
+               <form action="http://127.0.0.1:5000/Search" method=POST>
+                    <div class="searchbar">
+                        <input type="text" name="searchBox" id="searchBox" placeholder="Masukkan Query">
+                    </div>
+                    <div class="searchbutton"><button type="submit">Search</button></div>
+               </form>
                <div class = "uploadButton">
                     <A HREF="http://127.0.0.1:5000/Upload"><input type="submit" name = "uploadButton" value="Upload Files"></A> <!--nanti bakal ke page buat upload, tinggal ganti alamatnya-->
                </div>
