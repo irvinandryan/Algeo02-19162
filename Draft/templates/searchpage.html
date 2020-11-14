@@ -1,0 +1,235 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+ <title>AID Search!</title> 
+<link href="../{{ url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet"> 
+ </head> 
+<body> 
+ <a style="text-decoration: none" href="./"><h2>AID <span class="Searchy">Search!</span></h2></a><ul> 
+ <form action="http://127.0.0.1:5000/Search" method=POST> 
+<div class="searchbar"> 
+<input type="text" name="searchBox" id="searchBox" placeholder="Masukkan Query"> 
+<input type="submit" name="searchButton" value="Search"> 
+</div> 
+ </form> 
+ </ul> 
+<div class="listDoc" id="listdoc"> 
+<h3> Daftar Dokumen </h3> 
+ <ul> 
+<li> Bahasa_Indonesia.txt</li> 
+<li> Bali.txt</li> 
+<li> Daftar_kabupaten_dan_kota_di_Indonesia.txt</li> 
+<li> Gerakan_Pramuka_Indonesia.txt</li> 
+<li> Indonesia.txt</li> 
+<li> Kalimantan.txt</li> 
+<li> Kecamatan.txt</li> 
+<li> Kepolisian_Negara_Republik_Indonesia.txt</li> 
+<li> Kota_Bandung.txt</li> 
+<li> Kota_Surabaya.txt</li> 
+<li> Kota_Surakarta.txt</li> 
+<li> Orde_Baru.txt</li> 
+<li> Papua.txt</li> 
+<li> Provinsi_di_Indonesia.txt</li> 
+<li> Tentara_Nasional_Indonesia.txt</li> 
+</ul> 
+</div> 
+<div class="searchRes" id="searchres"> 
+<h3> Hasil Pencarian: </h3> <p> (diurutkan dari tingkat kemiripan tertinggi) </p> 
+ <ol> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Kota_Surakarta.txt"><b>Kota Surakarta</b></a><br/> 
+Jumlah kata: 116<br/> 
+Tingkat kemiripan: 84.85%<br/> 
+Kota Surakarta (Hanacaraka:ꦑꦸꦛꦯꦸꦫꦏꦂꦠ, Jawa: Kutha Surakarta), juga disebut Solo (ꦱꦭ), adalah wilayah otonom dengan status Kota di bawah Provinsi Jawa Tengah, Indonesia, dengan penduduk 519.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Papua.txt"><b>Papua</b></a><br/> 
+Jumlah kata: 75<br/> 
+Tingkat kemiripan: 79.7%<br/> 
+Papua adalah provinsi yang terletak di bagian tengah Pulau Papua atau bagian paling timur wilayah Papua milik Indonesia.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Kota_Bandung.txt"><b>Kota Bandung</b></a><br/> 
+Jumlah kata: 268<br/> 
+Tingkat kemiripan: 76.27%<br/> 
+Kota Bandung (Aksara Sunda Baku: ᮊᮧᮒ ᮘᮔ᮪ᮓᮥᮀ) adalah kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Kota_Surabaya.txt"><b>Kota Surabaya</b></a><br/> 
+Jumlah kata: 204<br/> 
+Tingkat kemiripan: 74.53%<br/> 
+Kota Surabaya (bahasa Jawa: Hanacaraka: ꦯꦸꦫꦧꦪ Pegon: سورابايه, Madura: Kottah Sorbhâjâh) adalah ibu kota Provinsi Jawa Timur, Indonesia, sekaligus kota metropolitan terbesar di provinsi tersebut.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Indonesia.txt"><b>Indonesia</b></a><br/> 
+Jumlah kata: 498<br/> 
+Tingkat kemiripan: 63.74%<br/> 
+Indonesia disebut juga dengan Republik Indonesia (RI) atau Negara Kesatuan Republik Indonesia (NKRI), adalah negara di Asia Tenggara yang dilintasi garis khatulistiwa dan berada di antara daratan benua Asia dan Australia, serta antara Samudra Pasifik dan Samudra Hindia.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Daftar_kabupaten_dan_kota_di_Indonesia.txt"><b>Daftar kabupaten dan kota di Indonesia</b></a><br/> 
+Jumlah kata: 53<br/> 
+Tingkat kemiripan: 63.24%<br/> 
+Berikut merupakan artikel tentang Daftar Kabupaten dan Kota di Indonesia.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Gerakan_Pramuka_Indonesia.txt"><b>Gerakan Pramuka Indonesia</b></a><br/> 
+Jumlah kata: 175<br/> 
+Tingkat kemiripan: 62.01%<br/> 
+Gerakan Pramuka Indonesia adalah nama organisasi pendidikan nonformal yang menyelenggarakan pendidikan kepanduan di Indonesia.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Kalimantan.txt"><b>Kalimantan</b></a><br/> 
+Jumlah kata: 154<br/> 
+Tingkat kemiripan: 60.91%<br/> 
+Kalimantan (toponim: Kalamantan, Calémantan, Kalémantan, Kelamantan, Kilamantan, Klamantan, Klémantan, K'lemantan, Quallamontan) atau juga disebut Borneo pada zaman kolonial, adalah pulau terbesar ketiga di dunia yang terletak di sebelah utara Pulau Jawa dan di sebelah barat Pulau Sulawesi.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Bali.txt"><b>Bali</b></a><br/> 
+Jumlah kata: 134<br/> 
+Tingkat kemiripan: 56.63%<br/> 
+Bali (bahasa Bali: ᬩᬮᬶ) adalah sebuah provinsi di Indonesia yang ibu kota provinsinya bernama Denpasar.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Bahasa_Indonesia.txt"><b>Bahasa Indonesia</b></a><br/> 
+Jumlah kata: 293<br/> 
+Tingkat kemiripan: 48.86%<br/> 
+Bahasa Indonesia adalah bahasa resmi Republik Indonesia dan bahasa persatuan bangsa Indonesia.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Kecamatan.txt"><b>Kecamatan</b></a><br/> 
+Jumlah kata: 236<br/> 
+Tingkat kemiripan: 44.72%<br/> 
+Kecamatan adalah bagian wilayah dari daerah kabupaten atau kota yang dipimpin oleh Camat.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Orde_Baru.txt"><b>Orde Baru</b></a><br/> 
+Jumlah kata: 62<br/> 
+Tingkat kemiripan: 44.72%<br/> 
+Orde Baru (seringkali disingkat Orba) adalah sebutan bagi masa pemerintahan Presiden Soeharto di Indonesia.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Kepolisian_Negara_Republik_Indonesia.txt"><b>Kepolisian Negara Republik Indonesia</b></a><br/> 
+Jumlah kata: 77<br/> 
+Tingkat kemiripan: 44.72%<br/> 
+Kepolisian Negara Republik Indonesia (disingkat Polri) adalah Kepolisian Nasional di Indonesia, yang bertanggung jawab langsung di bawah Presiden.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Provinsi_di_Indonesia.txt"><b>Provinsi di Indonesia</b></a><br/> 
+Jumlah kata: 67<br/> 
+Tingkat kemiripan: 44.72%<br/> 
+Dalam pembagian administratif, Indonesia terdiri atas provinsi, yang dikepalai oleh seorang gubernur.<br/> 
+ </li> 
+<li> <a style="text-decoration: none" href="http://127.0.0.1:5000/Display/Tentara_Nasional_Indonesia.txt"><b>Tentara Nasional Indonesia</b></a><br/> 
+Jumlah kata: 161<br/> 
+Tingkat kemiripan: 44.72%<br/> 
+Tentara Nasional Indonesia (disingkat menjadi TNI) adalah nama untuk angkatan bersenjata dari negara Indonesia.<br/> 
+ </li> 
+</ol> 
+</div> 
+<div class="matrix" id="matrix"> 
+<table id="tabelTerm"> 
+<tr> 
+ <th>Term</th> 
+ <th>Query</th> 
+<th>D1</th> 
+<th>D2</th> 
+<th>D3</th> 
+<th>D4</th> 
+<th>D5</th> 
+<th>D6</th> 
+<th>D7</th> 
+<th>D8</th> 
+<th>D9</th> 
+<th>D10</th> 
+<th>D11</th> 
+<th>D12</th> 
+<th>D13</th> 
+<th>D14</th> 
+<th>D15</th> 
+</tr> 
+<tr> 
+ <td>papua</td><td>1</td> 
+<td>0</td> 
+<td>9</td> 
+<td>0</td> 
+<td>0</td> 
+<td>3</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+</tr> 
+<tr> 
+ <td>rupa</td><td>1</td> 
+<td>2</td> 
+<td>2</td> 
+<td>4</td> 
+<td>1</td> 
+<td>1</td> 
+<td>2</td> 
+<td>2</td> 
+<td>0</td> 
+<td>1</td> 
+<td>1</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+</tr> 
+<tr> 
+ <td>timur</td><td>1</td> 
+<td>2</td> 
+<td>3</td> 
+<td>1</td> 
+<td>3</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>1</td> 
+<td>1</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+</tr> 
+<tr> 
+ <td>indonesia</td><td>1</td> 
+<td>1</td> 
+<td>2</td> 
+<td>2</td> 
+<td>5</td> 
+<td>23</td> 
+<td>2</td> 
+<td>3</td> 
+<td>4</td> 
+<td>2</td> 
+<td>21</td> 
+<td>3</td> 
+<td>2</td> 
+<td>4</td> 
+<td>4</td> 
+<td>5</td> 
+</tr> 
+<tr> 
+ <td>pulau</td><td>1</td> 
+<td>1</td> 
+<td>2</td> 
+<td>1</td> 
+<td>1</td> 
+<td>8</td> 
+<td>0</td> 
+<td>0</td> 
+<td>11</td> 
+<td>14</td> 
+<td>1</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+<td>0</td> 
+</tr> 
+</table> 
+</div> 
+<footer class="perihal"> 
+<a style="color:black ; text-decoration: none" href="./Perihal"> 
+<h3>Perihal AID</h3> 
+ </a> 
+</footer> 
+</body> 
+</html>
