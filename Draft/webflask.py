@@ -41,7 +41,7 @@ def searchPage():
     html += "<ul> \n <form action=\"http://127.0.0.1:5000/Search\" method=POST> \n"
     html += "<div class=\"searchbar\"> \n"
     html += "<input type=\"text\" name=\"searchBox\" id=\"searchBox\" placeholder=\"Masukkan Query\"> \n"
-    html += "<div class=\"searchbutton\"><button type=\"submit\">Search</button></div> \n"
+    html += "<div class=\"searchbutton\"><button type=\"submit\">Search</button> \n"
     html += "</div> \n </form> \n </ul> \n"
     
     # Daftar Dokumen
@@ -79,8 +79,9 @@ def searchPage():
     
     for i in range(len(q)):
         html += "<tr> \n <td>"+q[i]+"</td>"
-        for j in range(search_size+1):
-            html += "<td>"+str(workingTerm[j][i])+"</td> \n"
+        html += "<td>"+str(workingTerm[0][i])+"</td> \n"
+        for j in range(search_size):
+            html += "<td>"+str(workingTerm[indices[j]+1][i])+"</td> \n"
         html += "</tr> \n"
     
     html += "</table> \n </div> \n"
