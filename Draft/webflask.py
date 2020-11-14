@@ -44,23 +44,27 @@ def displayPage(filename):
     html += "<ul> \n <form action=\"http://127.0.0.1:5000/Search\" method=POST> \n"
     html += "<div class=\"searchbar\"> \n"
     html += "<input type=\"text\" name=\"searchBox\" id=\"searchBox\" placeholder=\"Masukkan Query\"> \n"
-    html += "<div class=\"document\"><button type=\"submit\">Search</button> \n"
-    html += "</div> \n"
+    html += "<input type=\"submit\" name=\"searchButton\" value=\"Search\"> \n"
+    html += "</div> \n</form> \n</ul> \n"
     
-    html += "<p>"
+    html += "<h3>"+filename[:-4].replace("_"," ")+"</h3> \n"
+    html += "<div class=\"document\"><p>"
     
     with open("./Data/"+filename, 'r') as file:
         data = file.read()
         html += data
     
-    html += "</p> \n"
+    html += "</p></div> \n"
     
     html += "<footer class=\"perihal\"> \n"
     html += "<a style=\"color:black ; text-decoration: none\" href=\"../Perihal\"> \n"
-    html += "<h3>Perihal AID</h3> \n </a> \n </footer> \n"
-    html += "</body> \n </html>"
+    html += "<h3>Perihal AID</h3> \n </a> \n</footer> \n"
+    html += "</body> \n</html>"
     
-    return html
+    with open("templates/display.html", "w") as file:
+        file.write(html)
+    
+    return render_template('display.html')
 
 @app.route('/Search', methods = ['GET', 'POST'])
 def searchPage():
@@ -79,7 +83,7 @@ def searchPage():
     html += "<ul> \n <form action=\"http://127.0.0.1:5000/Search\" method=POST> \n"
     html += "<div class=\"searchbar\"> \n"
     html += "<input type=\"text\" name=\"searchBox\" id=\"searchBox\" placeholder=\"Masukkan Query\"> \n"
-    html += "<div class=\"searchbutton\"><button type=\"submit\">Search</button> \n"
+    html += "<input type=\"submit\" name=\"searchButton\" value=\"Search\"> \n"
     html += "</div> \n </form> \n </ul> \n"
     
     # Daftar Dokumen
@@ -90,7 +94,7 @@ def searchPage():
     for filename in flist:
         html += "<li> "+str(filename)[5:]+"</li> \n"
     
-    html += "</ul> \n </div> \n"
+    html += "</ul> \n</div> \n"
     
     # Hasil Search
     
@@ -103,12 +107,12 @@ def searchPage():
         html += "Tingkat kemiripan: "+str(int(10000*sim[i])/100)+"%"+"<br/> \n"
         html += openings[indices[i]]+"<br/> \n </li> \n"
     
-    html += "</ol> \n </div> \n"
+    html += "</ol> \n</div> \n"
     
     # Matriks Term
     
     html += "<div class=\"matrix\" id=\"matrix\"> \n"
-    html += "<table> \n"
+    html += "<table id=\"tabelTerm\"> \n"
     html += "<tr> \n <th>Term</th> \n <th>Query</th> \n"
     
     for i in range(search_size):
@@ -122,14 +126,17 @@ def searchPage():
             html += "<td>"+str(workingTerm[indices[j]+1][i])+"</td> \n"
         html += "</tr> \n"
     
-    html += "</table> \n </div> \n"
+    html += "</table> \n</div> \n"
     
     html += "<footer class=\"perihal\"> \n"
     html += "<a style=\"color:black ; text-decoration: none\" href=\"./Perihal\"> \n"
-    html += "<h3>Perihal AID</h3> \n </a> \n </footer> \n"
-    html += "</body> \n </html>"
+    html += "<h3>Perihal AID</h3> \n </a> \n</footer> \n"
+    html += "</body> \n</html>"
     
-    return html
+    with open("templates/searchpage.html", "w") as file:
+        file.write(html)
+    
+    return render_template('searchpage.html')
     
 
 if __name__ == '__main__':
