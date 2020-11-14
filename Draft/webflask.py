@@ -20,9 +20,20 @@ def mainPage():
 def perihal():
     return render_template('perihal.html')
 
-@app.route('/Upload', methods = ['GET','POST']) #masih bad
+'''@app.route('/Upload', methods = ['GET','POST']) #masih bad
 def uploadPage():
-    return ("ini page buat upload")
+    return ("ini page buat upload")'''
+
+@app.route('/Upload')  
+def uploadPage():
+    return render_template("file_upload_form.html")
+
+@app.route('/success', methods = ['POST'])
+def success():
+    if request.method == 'POST':
+        f = request.files['file']
+        f.save("./Data/"+f.filename)
+        return render_template('file_upload_form.html')
 
 @app.route('/Search', methods = ['GET', 'POST'])
 def searchPage():
