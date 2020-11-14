@@ -6,6 +6,14 @@
     </head>
     <body>
         <a style="text-decoration: none" href="./"><h2>AID <span class="Searchy">Search!</span></h2></a>
+    <ul>
+        <form action="http://127.0.0.1:5000/Search" method=POST>
+            <div class="searchbar">
+                <input type="text" name="searchBox" id="searchBox" placeholder="Masukkan Query">
+                <input type="submit" name = "searchButton" value="Search">
+            </div>
+        </form>
+    </ul>
     <form action = "/success" method = "post" enctype="multipart/form-data">
     <input type="file" name="file" />
         <input type = "submit" value="Upload">

@@ -35,7 +35,7 @@ def success():
         f.save("./Data/"+f.filename)
         return render_template('file_upload_form.html')
 
-@app.route('/Display/<filename>', methods = ['GET'])
+@app.route('/Display/<filename>', methods = ['GET', 'POST'])
 def displayPage(filename):
     html = "<!DOCTYPE html> \n <html> \n "
     html += "<head> \n <title>AID Search!</title> \n"
@@ -50,7 +50,7 @@ def displayPage(filename):
     html += "<h3>"+filename[:-4].replace("_"," ")+"</h3> \n"
     html += "<div class=\"document\"><p>"
     
-    with open("./Data/"+filename, 'r') as file:
+    with open("./Data/"+filename, 'r', encoding="utf8") as file:
         data = file.read()
         html += data
     
@@ -61,7 +61,7 @@ def displayPage(filename):
     html += "<h3>Perihal AID</h3> \n </a> \n</footer> \n"
     html += "</body> \n</html>"
     
-    with open("templates/display.html", "w") as file:
+    with open("templates/display.html", "w", encoding="utf8") as file:
         file.write(html)
     
     return render_template('display.html')
@@ -70,7 +70,6 @@ def displayPage(filename):
 def searchPage():
     if request.method == "POST":
         query = request.form.get("searchBox")
-        
     global setupData
     setupData = sd.updateMaster(setupData)
     q, workingTerm, sim, indices = sd.search(query, setupData)
@@ -133,11 +132,11 @@ def searchPage():
     html += "<h3>Perihal AID</h3> \n </a> \n</footer> \n"
     html += "</body> \n</html>"
     
-    with open("templates/searchpage.html", "w") as file:
+    with open("templates/searchpage.html", "w", encoding="utf8") as file:
         file.write(html)
     
     return render_template('searchpage.html')
     
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
