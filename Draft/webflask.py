@@ -7,6 +7,7 @@ UPLOAD_FOLDER = '/uploadFiles'
 ALLOWED_EXTENSIONS = {'txt','pdf'}
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 setupData = sd.setup()
 
@@ -139,4 +140,4 @@ def searchPage():
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
