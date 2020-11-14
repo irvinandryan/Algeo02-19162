@@ -39,7 +39,7 @@ def success():
 def displayPage(filename):
     html = "<!DOCTYPE html> \n <html> \n "
     html += "<head> \n <title>AID Search!</title> \n"
-    html += "<link href=\"{{ url_for('static', filename='style.css') }}\" type=\"text/css\" rel=\"stylesheet\"> \n </head> \n"
+    html += "<link href=\"../{{ url_for('static', filename='style.css') }}\" type=\"text/css\" rel=\"stylesheet\"> \n </head> \n"
     html += "<body> \n <a style=\"text-decoration: none\" href=\"../\"><h2>AID <span class=\"Searchy\">Search!</span></h2></a>"
     html += "<ul> \n <form action=\"http://127.0.0.1:5000/Search\" method=POST> \n"
     html += "<div class=\"searchbar\"> \n"
@@ -56,7 +56,7 @@ def displayPage(filename):
     html += "</p> \n"
     
     html += "<footer class=\"perihal\"> \n"
-    html += "<a style=\"color:black ; text-decoration: none\" href=\"./Perihal\"> \n"
+    html += "<a style=\"color:black ; text-decoration: none\" href=\"../Perihal\"> \n"
     html += "<h3>Perihal AID</h3> \n </a> \n </footer> \n"
     html += "</body> \n </html>"
     
@@ -74,7 +74,7 @@ def searchPage():
     
     html = "<!DOCTYPE html> \n <html> \n "
     html += "<head> \n <title>AID Search!</title> \n"
-    html += "<link href=\"{{ url_for('static', filename='style.css') }}\" type=\"text/css\" rel=\"stylesheet\"> \n </head> \n"
+    html += "<link href=\"../{{ url_for('static', filename='style.css') }}\" type=\"text/css\" rel=\"stylesheet\"> \n </head> \n"
     html += "<body> \n <a style=\"text-decoration: none\" href=\"./\"><h2>AID <span class=\"Searchy\">Search!</span></h2></a>"
     html += "<ul> \n <form action=\"http://127.0.0.1:5000/Search\" method=POST> \n"
     html += "<div class=\"searchbar\"> \n"
