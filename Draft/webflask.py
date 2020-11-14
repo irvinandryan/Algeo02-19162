@@ -35,6 +35,33 @@ def success():
         f.save("./Data/"+f.filename)
         return render_template('file_upload_form.html')
 
+@app.route('/Display/<filename>', methods = ['GET'])
+def displayPage(filename):
+    html = "<!DOCTYPE html> \n <html> \n "
+    html += "<head> \n <title>AID Search!</title> \n"
+    html += "<link href=\"{{ url_for('static', filename='style.css') }}\" type=\"text/css\" rel=\"stylesheet\"> \n </head> \n"
+    html += "<body> \n <a style=\"text-decoration: none\" href=\"../\"><h2>AID <span class=\"Searchy\">Search!</span></h2></a>"
+    html += "<ul> \n <form action=\"http://127.0.0.1:5000/Search\" method=POST> \n"
+    html += "<div class=\"searchbar\"> \n"
+    html += "<input type=\"text\" name=\"searchBox\" id=\"searchBox\" placeholder=\"Masukkan Query\"> \n"
+    html += "<div class=\"document\"><button type=\"submit\">Search</button> \n"
+    html += "</div> \n"
+    
+    html += "<p>"
+    
+    with open("./Data/"+filename, 'r') as file:
+        data = file.read()
+        html += data
+    
+    html += "</p> \n"
+    
+    html += "<footer class=\"perihal\"> \n"
+    html += "<a style=\"color:black ; text-decoration: none\" href=\"./Perihal\"> \n"
+    html += "<h3>Perihal AID</h3> \n </a> \n </footer> \n"
+    html += "</body> \n </html>"
+    
+    return html
+
 @app.route('/Search', methods = ['GET', 'POST'])
 def searchPage():
     if request.method == "POST":
@@ -71,7 +98,7 @@ def searchPage():
     html += "<h3> Hasil Pencarian: </h3> <p> (diurutkan dari tingkat kemiripan tertinggi) </p> \n <ol> \n"
     
     for i in range(search_size):
-        html += "<li> <b>"+titles[indices[i]]+"</b><br/> \n"
+        html += "<li> <a style=\"text-decoration: none\" href=\"http://127.0.0.1:5000/Display/"+titles[indices[i]].replace(" ","_")+".txt\"><b>"+titles[indices[i]]+"</b></a><br/> \n"
         html += "Jumlah kata: "+str(len(docs[indices[i]+1]))+"<br/> \n"
         html += "Tingkat kemiripan: "+str(int(10000*sim[i])/100)+"%"+"<br/> \n"
         html += openings[indices[i]]+"<br/> \n </li> \n"
