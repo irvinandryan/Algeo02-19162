@@ -8,7 +8,7 @@ import vector_processing as vp
 def first_sentences(flist, search_size):
     openings = ["" for i in range(search_size)]
     for i in range(search_size):
-        with open(str(flist[i]), 'r') as file:
+        with open(str(flist[i]), 'r', encoding="utf8") as file:
             data = file.read().replace('\n', ' ')
             openings[i] = data[:(1+data.find("."))]
     
@@ -19,7 +19,7 @@ def stemDoc(filename):
     factory = StemmerFactory()
     stemmer = factory.create_stemmer()
 
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding="utf8") as file:
         data = file.read().replace('\n', ' ')
 
     output = stemmer.stem(data).split()
