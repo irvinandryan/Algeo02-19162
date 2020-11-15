@@ -4,9 +4,11 @@
 ## Table of contents
 * [General info](#general-info)
 * [Setup](#setup)
+* [Usage](#usage)
 * [Features](#features)
 * [Status](#status)
 * [Inspiration](#inspiration)
+* [Contact](#contact)
 
 ## General info
 AID Search! adalah website yang dikembangkan oleh kelompok 17 sebagai tugas besar mata kuliah Aljabar Linear dan Geometri tahun ajaran 2020/2021 berupa search engine. Search engine yang kelompok kami buat menggunakan bahasa pemrograman python dan menggunakan flask. Search engine yang kami buat menggunakan rumus cosine similarity untuk mencari kecocokan antar query dengan dokumen dan menampilkan dokumen yang paling tinggi tingkat kecocokannya dengan query, dan seterusnya berurut semakin rendah similarity nya. Ditampilkan pula tabel term yang akan menampilkan term-term yang menentukan similarity sebuah queue dengan dokumen.
@@ -47,3 +49,9 @@ Project is: _finished_ karena deadline-nya tanggal 16 November 2020
 
 ## Inspiration
 Terima kasih sebesar-besarnya kepada Bapak/Ibu dosen pengampu mata kuliah Aljabar Linear dan Geometri yang sudah berjasa dalam membimbing dan memberi kami ilmu.
+
+## Contact
+1. Irvin Andryan Pratomo      / 13519162
+2. Muhammad Dehan Al Kautsar  / 13519200
+3. Muhammad Rifat Abiwardani  / 13519205
+Kelompok 17 Algeo
