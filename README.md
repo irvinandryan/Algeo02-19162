@@ -34,7 +34,7 @@ Berikut cara melakukan instalasi pada OS Windows/MacOS:
 5. Setelah hasil search berhasil ditampilkan oleh program, judul dokumen yang ditampilkan pada hasil search dapat ditekan untuk membuka isi dokumennya.
 6. Untuk mengetahui informasi mengenai AID Search!, tekan tulisan "Perihal" pada bagian bawah halaman.
 7. Untuk kembali ke halaman main page, tekan tulisan "AID Search!" pada bagian atas halaman.
-8. Untuk keluar dari program, tekan tombol "CTRL" dan "C" secara bersamaan (untuk pengguna Mac OS)
+8. Untuk keluar dari program, buka terminal/cmd yang sedang menjalankan webflask.py dan tekan tombol "CTRL" dan "C" secara bersamaan.
 9. File .txt yang telah diupload saat menjalankan program akan tetap disimpan dalam folder test.
 
 ## Features
