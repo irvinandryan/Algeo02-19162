@@ -14,7 +14,7 @@ AID Search! adalah website yang dikembangkan oleh kelompok 17 sebagai tugas besa
 
 
 ## Setup
-Berikut cara melakukan instalasi pada OS Windows:
+Berikut cara melakukan instalasi pada OS Windows/MacOS:
 1. Pastikan python 3 dan pip sudah terinstall di perangkat dan sudah masuk ke local environment. (Untuk mengeceknya ketik "python --version" dan "pip --version" di cmd)
 2. Install stemmer Sastrawi menggunakan pip. (ketik "pip install Sastrawi" di cmd)
 3. Install pula Flask untuk mengakses search engine tersebut. (ketik "pip install flask" di cmd)
