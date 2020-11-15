@@ -14,7 +14,6 @@ AID Search! adalah website yang dikembangkan oleh kelompok 17 sebagai tugas besa
 
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
 Berikut cara melakukan instalasi pada OS Windows:
 1. Pastikan python 3 dan pip sudah terinstall di perangkat dan sudah masuk ke local environment. (Untuk mengeceknya ketik "python --version" dan "pip --version" di cmd)
 2. Install stemmer Sastrawi menggunakan pip. (ketik "pip install Sastrawi" di cmd)
@@ -26,9 +25,6 @@ Berikut cara melakukan instalasi pada OS Windows:
 8. Copy alamat tersebut (http://127.0.0.1:5000/) dan jalankan alamat tersebut di browser manapun. Tunggu proses initializing-nya kisaran 1 menit.
 9. AID Search! siap untuk digunakan.
 
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
 
 ## Features
 Beberapa list fitur dari program ini:
