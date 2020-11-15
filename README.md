@@ -53,5 +53,5 @@ Terima kasih sebesar-besarnya kepada Bapak/Ibu dosen pengampu mata kuliah Aljaba
 ## Contact
 1. Irvin Andryan Pratomo      / 13519162
 2. Muhammad Dehan Al Kautsar  / 13519200
-3. Muhammad Rifat Abiwardani  / 13519205
+3. Muhammad Rifat Abiwardani  / 13519205 <br>
 Kelompok 17 Algeo
